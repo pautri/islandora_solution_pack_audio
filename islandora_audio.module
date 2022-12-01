@@ -166,6 +166,14 @@ function template_preprocess_islandora_audio(array &$variables) {
     );
   }
 
+  // Peaks file.
+  if (isset($islandora_object['PEAKS']) && islandora_datastream_access(ISLANDORA_VIEW_OBJECTS, $islandora_object['PEAKS'])) {
+    $peaks_url = url("islandora/object/{$islandora_object->id}/datastream/PEAKS/view");
+    $audio_params += array(
+      'peaks' => $peaks_url,
+    );
+  }
+
   // Audio player.
   // Determine whether to attempt to use the OBJ or PROXY_MP3.
   module_load_include('inc', 'islandora_audio', 'includes/utilities');

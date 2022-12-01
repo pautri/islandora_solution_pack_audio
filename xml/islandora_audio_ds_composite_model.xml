@@ -20,10 +20,13 @@
     <form MIME="audio/vnd.wave"/>
     <form MIME="audio/flac"/>
   </dsTypeModel>
-  <dsTypeModel ID="PROXY_MP3" optional="false">
+  <dsTypeModel ID="PROXY_MP3" optional="true">
     <form MIME="audio/mpeg"/>
   </dsTypeModel>
-  <dsTypeModel ID="TN" optional="false">
+  <dsTypeModel ID="PEAKS" optional="true">
+    <form MIME="application/json"/>
+  </dsTypeModel>
+  <dsTypeModel ID="TN" optional="true">
     <form MIME="image/jpeg"/>
     <form MIME="image/png"/>
     <form MIME="image/gif"/>
